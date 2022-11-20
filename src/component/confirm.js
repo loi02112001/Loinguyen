@@ -53,7 +53,7 @@ export default function Confirm() {
                 <Box className="order" >
                     <Grid container spacing={2}>
                         <Grid item xs={10} className="order__box" >
-                            <Box p={2} bgcolor="#ffffff" borderRadius={6}>
+                            <Box padding="16px 16px 40px 16px" bgcolor="#ffffff" borderRadius={6}>
                                 <Box className="order__box__title" >Đơn mới</Box>
                                 <Box className="order__box__content">
                                     <Grid container spacing={3} >
@@ -98,7 +98,7 @@ export default function Confirm() {
                                     </Box>
                                     <TextField fullWidth label="Địa chỉ *" />
                                 </Box>
-                            </Box>
+                            </Box >
                         </Grid>
                         <Grid item xs={2} className="order__button">
                             <Box mb={2}>
