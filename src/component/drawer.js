@@ -39,7 +39,7 @@ export default function MuiDrawer() {
                             return (
                                 <Grid item xs={3} sm={3} key={item.id} >
                                     {/* <Box  display={location.pathname=="/confirm" ? 'block' : 'none'} className={classes.confirm__boxData__item} bgcolor={item.bgColor}> */}
-                                    <Box className={location.pathname==='/confirm'?classes.mobile:"none"} bgcolor={item.bgColor}>
+                                    <Box className={location.pathname==='/'?classes.mobile:"none"} bgcolor={item.bgColor}>
                                         <Box fontSize={30}>0</Box>
                                         <Box fontSize={13}>{item.titleName}</Box>
                                     </Box>

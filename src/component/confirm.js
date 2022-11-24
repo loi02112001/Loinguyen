@@ -16,8 +16,17 @@ export default function Confirm() {
         var year = date.getFullYear()
         var month = date.getMonth() + 1
         var hour = date.getHours()
+        if(hour < 10){
+            hour = `0${hour}`
+        }
         var minute = date.getMinutes()
+        if(minute < 10){
+            minute = `0${minute}`
+        }   
         var seconds = date.getSeconds()
+        if(seconds < 10){
+            seconds = `0${seconds}`
+        }
         var timing = `${day}/${month}/${year} ${hour}:${minute}:${seconds}`
         if(document.querySelector('.confirm__header__time')){
             document.querySelector('.confirm__header__time').innerHTML = timing
