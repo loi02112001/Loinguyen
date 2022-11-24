@@ -8,7 +8,7 @@ export const listMenu = [
     {
         "id": 2,
         "menuName": "Xác nhận đơn",
-        "path":"/"
+        "path":"/confirm"
     },
     {
         "id": 3,

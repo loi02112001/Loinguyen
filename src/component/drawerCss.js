@@ -35,6 +35,9 @@ export const useStyle = makeStyles((theme) => ({
             paddingBottom: "10px",
         }
     },
+    laptop:{
+        display:"none"
+    }
 }))
 
 
