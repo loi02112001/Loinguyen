@@ -2,14 +2,14 @@ import { Box } from "@material-ui/core"
 import { listMenu } from "../mockup";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { Link } from "react-router-dom";
-import { useStyles } from "./sidebarcss";
+import { useStyles } from "../componetnCss/sidebarcss";
 import { useLocation } from "react-router-dom";
 
 export default function SideBarComponent(props) {
     const location = useLocation()
     const classes = useStyles();
     return (
-        <Box display={props.list == true ? "flex" : "none"} className={classes.sidebarStyle}>
+        <Box display={props.list === true ? "flex" : "none"} className={classes.sidebarStyle}>
             <Box >
                 <Box className={classes.sidebarAvatar}>
                     <Box className={classes.sidebarAvatar__content}>
@@ -23,7 +23,7 @@ export default function SideBarComponent(props) {
                         {listMenu.map((item) => {
                             return (
                                 <Link  key={item.id} className={classes.header__menu__link} to={item.path}>
-                                    <Box className={`${classes.listMenu} ${location.pathname==item.path?classes.listMenuClick:'none'}`}>{item.menuName}</Box>
+                                    <Box className={`${classes.listMenu} ${location.pathname===item.path?classes.listMenuClick:'none'}`}>{item.menuName}</Box>
                                 </Link>
                             )
                         })}

@@ -15,7 +15,7 @@ export default function Authen() {
         <div>
             <Routes>
                 <Route path="/" element={<pages.StudentPage></pages.StudentPage>} >
-                    <Route path="/confirm" element={<Confirm></Confirm>} />
+                    <Route path="/" element={<Confirm></Confirm>} />
                     <Route path="/history" element={<History />} />
                     <Route path="/list" element={<List />} />
                     <Route path="/result" element={<Result />} />

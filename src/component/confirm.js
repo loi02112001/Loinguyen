@@ -7,7 +7,7 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import { useStyles } from "./confirmcss";
+import { useStyles } from "../componetnCss/confirmcss";
 
 export default function Confirm() {
     setInterval(() => {
@@ -16,23 +16,23 @@ export default function Confirm() {
         var year = date.getFullYear()
         var month = date.getMonth() + 1
         var hour = date.getHours()
-        if(hour < 10){
+        if (hour < 10) {
             hour = `0${hour}`
         }
         var minute = date.getMinutes()
-        if(minute < 10){
+        if (minute < 10) {
             minute = `0${minute}`
-        }   
+        }
         var seconds = date.getSeconds()
-        if(seconds < 10){
+        if (seconds < 10) {
             seconds = `0${seconds}`
         }
         var timing = `${day}/${month}/${year} ${hour}:${minute}:${seconds}`
-        if(document.querySelector('.confirm__header__time')){
+        if (document.querySelector('.confirm__header__time')) {
             document.querySelector('.confirm__header__time').innerHTML = timing
         }
     }, 1000);
-   
+
     const classes = useStyles()
     return (
         <Box className={classes.confirm}>
@@ -73,7 +73,7 @@ export default function Confirm() {
                                             <TextField fullWidth label="Giá trị *" />
                                         </Grid>
                                     </Grid>
-                                    <TextField fullWidth label="Ghi chú *" />
+                                    <TextField fullWidth label="Địa chỉ *" />
                                     <Box className={classes.order__box__radioButton}>
                                         <Grid container spacing={3}>
                                             <Grid item xs={6}>
@@ -100,23 +100,23 @@ export default function Confirm() {
                                             </Grid>
                                         </Grid>
                                     </Box>
-                                    <TextField fullWidth label="Địa chỉ *" />
+                                    <TextField fullWidth label="Ghi chú *" />
                                 </Box>
                             </Box >
                         </Grid>
                         <Grid item md={2} sm={12} >
                             <Grid container spacing={1} className={classes.order__btn}>
-                                <Grid item sm={2} md={12}>
-                                    <Button fullWidth variant="contained" color="success">NHẬN</Button>
+                                <Grid item sm={3} md={12} xs={3}>
+                                    <Button className={classes.btn} ><Box className={classes.btn__customize1}>NHẬN</Box></Button>
                                 </Grid>
-                                <Grid item sm={2} md={12}>
-                                    <Button fullWidth variant="contained" color="warning" >HUỶ</Button>
+                                <Grid item sm={3} md={12} xs={3}>
+                                    <Button className={classes.btn} ><Box className={classes.btn__customize2} >HUỶ</Box></Button>
                                 </Grid>
-                                <Grid item sm={2} md={12}>
-                                    <Button fullWidth variant="contained" color="error">GỌI LẠI</Button>
+                                <Grid item sm={3} md={12} xs={3}>
+                                    <Button className={classes.btn}><Box className={classes.btn__customize3}>GỌI LẠI</Box></Button>
                                 </Grid>
-                                <Grid item sm={2} md={12}>
-                                    <Button fullWidth variant="contained" color="primary" >VỀ SALE</Button>
+                                <Grid item sm={3} md={12} xs={3}>
+                                    <Button className={classes.btn}  ><Box className={classes.btn__customize4}>VỀ SALE</Box></Button>
                                 </Grid>
                             </Grid>
                         </Grid>

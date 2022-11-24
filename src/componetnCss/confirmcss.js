@@ -64,6 +64,43 @@ export const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("sm")]: {
             width:"100%"
         }
-    }
+    },
+    btn:{
+        width:"100%",
+    },
+    btn__customize1:{
+        width:"100%",
+        backgroundColor:"green",
+        color:"white",
+        borderRadius:"4px",
+        padding:"4px 0",
+        maxWidth:"200px"
+    },
+    btn__customize2:{
+        width:"100%",
+        backgroundColor:"orange",
+        color:"white",
+        borderRadius:"4px",
+        padding:"4px 0",
+        maxWidth:"200px"
+
+    },
+    btn__customize3:{
+        width:"100%",
+        backgroundColor:"red",
+        color:"white",
+        borderRadius:"4px",
+        padding:"4px 0",
+        maxWidth:"200px"
+
+    },
+    btn__customize4:{
+        width:"100%",
+        backgroundColor:"#00897b",
+        color:"white",
+        borderRadius:"4px",
+        padding:"4px 0",
+        maxWidth:"200px"
+    },
 
 }))

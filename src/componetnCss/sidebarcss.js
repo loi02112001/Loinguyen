@@ -19,7 +19,7 @@ export const useStyles = makeStyles((theme) => ({
         }
     },
     sidebarAvatar: {
-        borderBottom: "1px solid white",
+        borderBottom: "1px solid #bdbdbd",
         padding: "30px 0 0 0"
     },
     sidebarAvatar__content: {
@@ -27,10 +27,11 @@ export const useStyles = makeStyles((theme) => ({
         margin: "0 auto "
     },
     sidebarLiscene: {
-        color: "white",
+        color: "#bdbdbd",
         fontSize: "10px",
         textAlign: "center",
-        paddingBottom: "10px"
+        paddingBottom: "10px",
+        
     },
     header__menu__link: {
         textDecoration: "none",
@@ -69,5 +70,4 @@ export const useStyles = makeStyles((theme) => ({
         backgroundColor:"white",
         color:"black"
     }
-
 }))

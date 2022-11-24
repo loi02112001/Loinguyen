@@ -1,4 +1,4 @@
-import { Box, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../component/sidebar";
 import MuiDrawer from "../component/drawer";

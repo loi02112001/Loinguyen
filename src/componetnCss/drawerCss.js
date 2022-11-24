@@ -12,20 +12,6 @@ export const useStyle = makeStyles((theme) => ({
             justifyContent: "space-between"
         }
     },
-    // confirm__boxData__item:{
-    //     textAlign: "center",
-    //     color:"white",
-    //     paddingBottom:"10px",
-    //     display:"none",
-
-    //     [theme.breakpoints.down('xs')]:{
-    //         display:'block',
-    //     }
-
-    // },
-    // confirm__boxData__click:{
-    //     display:'block'
-    // }
     mobile: {
         display:"none",
         [theme.breakpoints.down('xs')]: {
