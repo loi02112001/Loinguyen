@@ -1,14 +1,22 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 
-export const useStyles = makeStyles({
+export const useStyles = makeStyles((theme) => ({
     sidebarStyle: {
-        height: "100vh", 
+        height: "100%",
         position: "relative",
         backgroundColor: "#151534",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between"
+        [theme.breakpoints.down("sm")]: {
+            flexDirection: "column",
+            justifyContent: "space-between",
+            height:"100vh"
+        },
+        [theme.breakpoints.up("md")]: {
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            height:"100vh"
+        }
     },
     sidebarAvatar: {
         borderBottom: "1px solid white",
@@ -22,11 +30,10 @@ export const useStyles = makeStyles({
         color: "white",
         fontSize: "10px",
         textAlign: "center",
-        paddingBottom:"10px"
-        
+        paddingBottom: "10px"
     },
     header__menu__link: {
-        textDecoration: "none"
+        textDecoration: "none",
     },
     sidebarAvatar__content__name: {
         marginTop: "10px",
@@ -47,16 +54,20 @@ export const useStyles = makeStyles({
         fontSize: "14px"
     },
     btn__signout__icon: {
-        fontSize:"16px",
-        marginLeft:"3px"
+        fontSize: "16px",
+        marginLeft: "3px"
     },
     btn__signout__name: {
         fontSize: "14px"
     },
-    listMenu:{
-        fontSize:"14px",
-        color:"white",
-        padding:"13px 0 10px 13px"
+    listMenu: {
+        fontSize: "14px",
+        color: "white",
+        padding: "13px 0 10px 13px"
     },
-    
-})
+    listMenuClick:{
+        backgroundColor:"white",
+        color:"black"
+    }
+
+}))

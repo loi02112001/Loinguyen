@@ -9,21 +9,21 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import { useStyles } from "./confirmcss";
 
-setInterval(() => {
-    var date = new Date()
-    var day = date.getDate()
-    var year = date.getFullYear()
-    var month = date.getMonth() + 1
-    var hour = date.getHours()
-    var minute = date.getMinutes()
-    var seconds = date.getSeconds()
-    var timing = `${day}/${month}/${year} ${hour}:${minute}:${seconds}`
-    if (document.querySelector('.confirm__header__time')) {
-        document.querySelector('.confirm__header__time').innerHTML = timing
-    }
-}, 1000);
-
 export default function Confirm() {
+    setInterval(() => {
+        var date = new Date()
+        var day = date.getDate()
+        var year = date.getFullYear()
+        var month = date.getMonth() + 1
+        var hour = date.getHours()
+        var minute = date.getMinutes()
+        var seconds = date.getSeconds()
+        var timing = `${day}/${month}/${year} ${hour}:${minute}:${seconds}`
+        if(document.querySelector('.confirm__header__time')){
+            document.querySelector('.confirm__header__time').innerHTML = timing
+        }
+    }, 1000);
+   
     const classes = useStyles()
     return (
         <Box className={classes.confirm}>
@@ -50,7 +50,7 @@ export default function Confirm() {
                 </Box>
                 <Box className="order" >
                     <Grid container spacing={2}>
-                        <Grid item xs={10}  >
+                        <Grid item md={10} sm={12}>
                             <Box className={classes.order__box}>
                                 <Box >Đơn mới</Box>
                                 <Box>
@@ -64,8 +64,8 @@ export default function Confirm() {
                                             <TextField fullWidth label="Giá trị *" />
                                         </Grid>
                                     </Grid>
-                                    <TextField fullWidth label="Địa chỉ *" />
-                                    <Box  className={classes.order__box__radioButton}>
+                                    <TextField fullWidth label="Ghi chú *" />
+                                    <Box className={classes.order__box__radioButton}>
                                         <Grid container spacing={3}>
                                             <Grid item xs={6}>
                                                 <FormControl>
@@ -73,8 +73,8 @@ export default function Confirm() {
                                                         aria-labelledby="demo-radio-buttons-group-label"
                                                         defaultValue="female"
                                                         name="radio-buttons-group">
-                                                        <FormControlLabel value="Miền Bắc" control={<Radio />} label="Miền bắc" />
-                                                        <FormControlLabel value="Miền Nam" control={<Radio />} label="Miền Nam" />
+                                                        <FormControlLabel className={classes.radioBtn} value="Miền Bắc" control={<Radio />} label="Miền bắc" />
+                                                        <FormControlLabel className={classes.radioBtn} value="Miền Nam" control={<Radio />} label="Miền Nam" />
                                                     </RadioGroup>
                                                 </FormControl>
                                             </Grid>
@@ -84,8 +84,8 @@ export default function Confirm() {
                                                         aria-labelledby="demo-radio-buttons-group-label"
                                                         defaultValue="female"
                                                         name="radio-buttons-group" >
-                                                        <FormControlLabel value="Nam" control={<Radio />} label="Nam" />
-                                                        <FormControlLabel value="Nữ" control={<Radio />} label="Nữ" />
+                                                        <FormControlLabel className={classes.radioBtn} value="Nam" control={<Radio />} label="Nam" />
+                                                        <FormControlLabel className={classes.radioBtn} value="Nữ" control={<Radio />} label="Nữ" />
                                                     </RadioGroup>
                                                 </FormControl>
                                             </Grid>
@@ -95,19 +95,21 @@ export default function Confirm() {
                                 </Box>
                             </Box >
                         </Grid>
-                        <Grid item xs={2}   >
-                            <Box mb={2}>
-                                <Button fullWidth variant="contained" color="success">NHẬN</Button>
-                            </Box>
-                            <Box mb={2}>
-                                <Button fullWidth variant="contained" color="warning" >HUỶ</Button>
-                            </Box>
-                            <Box mb={2}>
-                                <Button fullWidth variant="contained" color="error">GỌI LẠI</Button>
-                            </Box>
-                            <Box mb={2}>
-                                <Button fullWidth variant="contained" color="primary" >VỀ SALE</Button>
-                            </Box>
+                        <Grid item md={2} sm={12} >
+                            <Grid container spacing={1} className={classes.order__btn}>
+                                <Grid item sm={2} md={12}>
+                                    <Button fullWidth variant="contained" color="success">NHẬN</Button>
+                                </Grid>
+                                <Grid item sm={2} md={12}>
+                                    <Button fullWidth variant="contained" color="warning" >HUỶ</Button>
+                                </Grid>
+                                <Grid item sm={2} md={12}>
+                                    <Button fullWidth variant="contained" color="error">GỌI LẠI</Button>
+                                </Grid>
+                                <Grid item sm={2} md={12}>
+                                    <Button fullWidth variant="contained" color="primary" >VỀ SALE</Button>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Box>
