@@ -12,7 +12,7 @@ export const useStyles = makeStyles((theme) => ({
             padding: "0"
         },
         [theme.breakpoints.down("xs")]: {
-            width:"95%"
+            width: "95%"
         }
     },
     confirm__header: {
@@ -20,26 +20,26 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: "space-between",
         marginBottom: "35px",
         [theme.breakpoints.down("xs")]: {
-            paddingTop:"30px"
+            paddingTop: "30px"
         }
     },
     confirm__header__select: {
         width: "15%",
         backgroundColor: "#d9d8da",
         [theme.breakpoints.down("xs")]: {
-            width:"30%"
+            width: "30%"
         }
     },
     confirm__boxData: {
         marginBottom: "25px",
         [theme.breakpoints.down("xs")]: {
-            display:"none"
+            display: "none"
         }
     },
     confirm__boxData__item: {
         textAlign: "center",
-        padding:"16px 0",
-        borderRadius:"5px"
+        padding: "16px 0",
+        borderRadius: "5px"
     },
     order__box: {
         padding: "16px 16px 30px 16px",
@@ -60,47 +60,47 @@ export const useStyles = makeStyles((theme) => ({
             padding: "15px 0"
         }
     },
-    radioBtn:{
+    radioBtn: {
         [theme.breakpoints.down("sm")]: {
-            width:"100%"
+            width: "100%"
         }
     },
-    btn:{
-        width:"100%",
+    btn: {
+        width: "100%",
     },
-    btn__customize1:{
-        width:"100%",
-        backgroundColor:"green",
-        color:"white",
-        borderRadius:"4px",
-        padding:"4px 0",
-        maxWidth:"200px"
+    btn__customize1: {
+        width: "100%",
+        backgroundColor: "green",
+        color: "white",
+        borderRadius: "4px",
+        padding: "4px 0",
+        maxWidth: "200px"
     },
-    btn__customize2:{
-        width:"100%",
-        backgroundColor:"orange",
-        color:"white",
-        borderRadius:"4px",
-        padding:"4px 0",
-        maxWidth:"200px"
+    btn__customize2: {
+        width: "100%",
+        backgroundColor: "orange",
+        color: "white",
+        borderRadius: "4px",
+        padding: "4px 0",
+        maxWidth: "200px"
 
     },
-    btn__customize3:{
-        width:"100%",
-        backgroundColor:"red",
-        color:"white",
-        borderRadius:"4px",
-        padding:"4px 0",
-        maxWidth:"200px"
+    btn__customize3: {
+        width: "100%",
+        backgroundColor: "red",
+        color: "white",
+        borderRadius: "4px",
+        padding: "4px 0",
+        maxWidth: "200px"
 
     },
-    btn__customize4:{
-        width:"100%",
-        backgroundColor:"#00897b",
-        color:"white",
-        borderRadius:"4px",
-        padding:"4px 0",
-        maxWidth:"200px"
+    btn__customize4: {
+        width: "100%",
+        backgroundColor: "#00897b",
+        color: "white",
+        borderRadius: "4px",
+        padding: "4px 0",
+        maxWidth: "200px"
     },
 
 }))

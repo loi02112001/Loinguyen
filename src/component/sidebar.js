@@ -13,17 +13,17 @@ export default function SideBarComponent(props) {
             <Box >
                 <Box className={classes.sidebarAvatar}>
                     <Box className={classes.sidebarAvatar__content}>
-                        <Box width="100%" component="img" src="https://1.bp.blogspot.com/--cwALLkjCmE/YGLZYq7VqvI/AAAAAAAArCw/4uWXNg5iBYQsblpvSO2UDHEG5NF4RYWtgCNcBGAsYHQ/s0/2d27fefccf755efa36a6ba7c9c8ff5db.jpeg"></Box>
+                        <Box className={classes.box__img}><Box mt="30px" component="img" borderRadius="6px" width="100%" src="https://1.bp.blogspot.com/--cwALLkjCmE/YGLZYq7VqvI/AAAAAAAArCw/4uWXNg5iBYQsblpvSO2UDHEG5NF4RYWtgCNcBGAsYHQ/s0/2d27fefccf755efa36a6ba7c9c8ff5db.jpeg" /></Box>
                         <Box className={classes.sidebarAvatar__content__name}>Loi</Box>
                         <Box className={classes.sidebarAvatar__content__job}>Professor</Box>
                     </Box>
                 </Box>
-                <Box className="header__menu">
+                <Box className="header__menu" height="65vh" display="flex" flexDirection="column" justifyContent="space-between">
                     <Box>
                         {listMenu.map((item) => {
                             return (
-                                <Link  key={item.id} className={classes.header__menu__link} to={item.path}>
-                                    <Box className={`${classes.listMenu} ${location.pathname===item.path?classes.listMenuClick:'none'}`}>{item.menuName}</Box>
+                                <Link key={item.id} className={classes.header__menu__link} to={item.path}>
+                                    <Box className={`${classes.listMenu} ${location.pathname === item.path ? classes.listMenuClick : 'none'}`}>{item.menuName}</Box>
                                 </Link>
                             )
                         })}
@@ -34,10 +34,9 @@ export default function SideBarComponent(props) {
                             </Box>
                         </Box>
                     </Box>
-
+                    <Box className={classes.sidebarLiscene}>Copyright 2022 Eledevo Software</Box>
                 </Box>
             </Box>
-            <Box className={classes.sidebarLiscene}>Copyright 2022 Eledevo Software</Box>
         </Box>
     )
 }

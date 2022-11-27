@@ -13,7 +13,7 @@ export const useStyle = makeStyles((theme) => ({
         }
     },
     mobile: {
-        display:"none",
+        display: "none",
         [theme.breakpoints.down('xs')]: {
             display: 'block',
             textAlign: "center",
@@ -21,8 +21,8 @@ export const useStyle = makeStyles((theme) => ({
             paddingBottom: "10px",
         }
     },
-    laptop:{
-        display:"none"
+    laptop: {
+        display: "none"
     }
 }))
 

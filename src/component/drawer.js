@@ -21,7 +21,9 @@ export default function MuiDrawer() {
                     </IconButton>
                     <Drawer sx={{
                         "& .MuiPaper-root": {
-                            width: "40%"
+                            width: "35%",
+                            maxWidth: "250px",
+                            minWidth: "200px"
                         }
                     }}
                         anchor="left" open={isOpen} onClose={() =>
@@ -35,7 +37,7 @@ export default function MuiDrawer() {
                         {listTitle.map((item, key) => {
                             return (
                                 <Grid item xs={3} sm={3} key={item.id} >
-                                    <Box className={location.pathname==='/'?classes.mobile:classes.laptop} bgcolor={item.bgColor}>
+                                    <Box className={location.pathname === '/' ? classes.mobile : classes.laptop} bgcolor={item.bgColor}>
                                         <Box fontSize={30}>0</Box>
                                         <Box fontSize={13}>{item.titleName}</Box>
                                     </Box>
